@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+
+    <rect width="100" height="100" rx="22" fill="#174a7e"/>
+
+    <path
+        d="M25 70 L40 55 L55 62 L78 30"
+        fill="none"
+        stroke="#b88900"
+        stroke-width="8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    />
+
+    <circle
+        cx="78"
+        cy="30"
+        r="6"
+        fill="#b88900"
+    />
+
+    <text
+        x="27"
+        y="43"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="28"
+        font-weight="bold"
+        fill="#ffffff">
+        ₡
+    </text>
+
+</svg>
