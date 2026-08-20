@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <!-- Fondo circular limpio -->
+  <circle cx="100" cy="100" r="95" fill="#f4f6f8" stroke="#dce2e7" stroke-width="4"/>
+  
+  <!-- Barras financieras minimalistas -->
+  <rect x="42" y="110" width="24" height="45" rx="5" fill="#174a7e" />
+  <rect x="74" y="80" width="24" height="75" rx="5" fill="#174a7e" />
+  
+  <!-- Columna principal con el símbolo de colones (₡) integrado -->
+  <rect x="106" y="45" width="24" height="110" rx="5" fill="#b88900" />
+  <text x="118" y="105" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="34" fill="#ffffff" text-anchor="middle">₡</text>
+  
+  <!-- Línea de tendencia / crecimiento -->
+  <path d="M 54 95 L 86 65 L 118 35" fill="none" stroke="#b88900" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Punto indicador superior -->
+  <circle cx="118" cy="35" r="6" fill="#174a7e"/>
+</svg>

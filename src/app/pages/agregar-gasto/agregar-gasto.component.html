@@ -1,0 +1,107 @@
+<app-navbar></app-navbar>
+
+<main class="agregar-gasto-container">
+
+    <section class="formulario-gasto">
+
+        <div class="formulario-header">
+
+            <div class="seccion-titulo">
+
+                <img src="/icons/gasto.svg" alt="">
+
+                <h1>Agregar gasto</h1>
+
+            </div>
+
+            <p>
+                Registre un nuevo gasto en uno de sus presupuestos.
+            </p>
+
+        </div>
+
+
+        <form (ngSubmit)="agregarGasto()">
+
+            <label for="presupuesto">
+                Presupuesto
+            </label>
+
+            <select id="presupuesto" name="presupuesto" [(ngModel)]="presupuestoId">
+
+                <option [ngValue]="null">
+                    Seleccione un presupuesto
+                </option>
+
+                @for (
+                presupuesto of presupuestoService.presupuestos$();
+                track presupuesto.id
+                ) {
+
+                <option [ngValue]="presupuesto.id">
+
+                    {{ presupuesto.nombre }}
+                    - ₡{{ presupuestoService.obtenerSaldo(presupuesto) }}
+
+                </option>
+
+                }
+
+            </select>
+
+
+            <label for="categoria">
+                Categoría del gasto
+            </label>
+
+            <select id="categoria" name="categoria" [(ngModel)]="categoria">
+
+                <option value="">
+                    Seleccione una categoría
+                </option>
+
+                <option value="Comida">Comida</option>
+                <option value="Universidad">Universidad</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Servicios">Servicios</option>
+                <option value="Pasajes">Pasajes</option>
+                <option value="Entretenimiento">Entretenimiento</option>
+                <option value="Otros">Otros</option>
+
+            </select>
+
+
+            <label for="monto">
+                Monto del gasto
+            </label>
+
+            <input id="monto" type="number" name="monto" [(ngModel)]="monto" min="1" placeholder="Ej. 15000">
+
+
+            <button type="submit">
+                Agregar gasto
+            </button>
+
+        </form>
+
+
+        @if (mensaje) {
+
+        <p class="mensaje-exito">
+            {{ mensaje }}
+        </p>
+
+        }
+
+
+        @if (mensajeError) {
+
+        <p class="mensaje-error">
+            {{ mensajeError }}
+        </p>
+
+        }
+
+    </section>
+
+</main>

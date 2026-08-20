@@ -1,0 +1,144 @@
+/*contenedor principal*/
+
+.inicio-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(135deg,
+            var(--fondo-secundario),
+            var(--fondo-principal));
+}
+
+/*tarjeta principal*/
+
+.inicio-card {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 45px 40px;
+
+    text-align: center;
+
+    background-color: var(--fondo-card);
+
+    border: 1px solid var(--borde);
+    border-top: 5px solid var(--azul-corporativo);
+
+    border-radius: 16px;
+
+    box-shadow: 0 12px 35px var(--sombra);
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+}
+
+/*titulo*/
+
+h1 {
+    margin: 0 0 25px;
+
+    color: var(--azul-corporativo);
+
+    font-size: 38px;
+    font-weight: bold;
+}
+
+/*programador*/
+
+.programador {
+    margin: 0 0 30px;
+
+    color: var(--texto-secundario);
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.programador strong {
+    color: var(--texto-principal);
+}
+
+/*boton*/
+
+button {
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--azul-corporativo);
+
+    color: var(--fondo-principal);
+
+    font-size: 16px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 10px var(--sombra);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/*efecto del boton*/
+
+button:hover {
+    background-color: var(--azul-oscuro);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 14px var(--sombra);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/*responsive*/
+
+@media (max-width: 600px) {
+
+    .inicio-container {
+        padding: 20px;
+    }
+
+    .inicio-card {
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .logo {
+        width: 75px;
+        height: 75px;
+
+        font-size: 42px;
+    }
+
+}

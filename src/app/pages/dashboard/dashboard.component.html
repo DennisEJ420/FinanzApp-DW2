@@ -1,0 +1,114 @@
+<app-navbar></app-navbar>
+
+<main class="dashboard-container">
+
+    <div class="dashboard-header">
+
+        <img
+            src="/icons/dashboard.svg"
+            alt=""
+        >
+
+        <div>
+            <h1>Dashboard</h1>
+
+            <p>
+                Resumen de tus finanzas personales
+            </p>
+        </div>
+
+    </div>
+
+
+    <section class="cards-container">
+
+        <article class="dashboard-card">
+
+            <div class="card-icon">
+
+                <img
+                    src="/icons/presupuesto.svg"
+                    alt=""
+                >
+
+            </div>
+
+            <h2>
+                Presupuestos creados
+            </h2>
+
+            <p class="card-value">
+                {{ presupuestoService.obtenerCantidadPresupuestos() }}
+            </p>
+
+        </article>
+
+
+        <article class="dashboard-card">
+
+            <div class="card-icon">
+
+                <img
+                    src="/icons/alerta.svg"
+                    alt=""
+                >
+
+            </div>
+
+            <h2>
+                Presupuestos agotados
+            </h2>
+
+            <p class="card-value">
+                {{ presupuestoService.obtenerCantidadAgotados() }}
+            </p>
+
+        </article>
+
+
+        <article class="dashboard-card">
+
+            <div class="card-icon">
+
+                <img
+                    src="/icons/presupuesto.svg"
+                    alt=""
+                >
+
+            </div>
+
+            <h2>
+                Mes con presupuesto más alto
+            </h2>
+
+            <p class="card-value">
+                {{ presupuestoService.obtenerMesPresupuestoMasAlto() }}
+            </p>
+
+        </article>
+
+
+        <article class="dashboard-card">
+
+            <div class="card-icon">
+
+                <img
+                    src="/icons/gasto.svg"
+                    alt=""
+                >
+
+            </div>
+
+            <h2>
+                Categoría con mayor consumo
+            </h2>
+
+            <p class="card-value">
+                {{ presupuestoService.obtenerCategoriaMayorConsumo() }}
+            </p>
+
+        </article>
+
+    </section>
+
+</main>

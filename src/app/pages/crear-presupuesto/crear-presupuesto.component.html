@@ -1,0 +1,113 @@
+<app-navbar></app-navbar>
+
+<main class="crear-presupuesto-container">
+
+    <section class="presupuestos-lista">
+
+        <div class="seccion-titulo">
+
+            <img src="/icons/presupuesto.svg" alt="">
+
+            <h1>Mis presupuestos</h1>
+
+        </div>
+
+        @for (presupuesto of presupuestoService.presupuestos$(); track presupuesto.id) {
+
+        <article class="presupuesto-card" [class.presupuesto-agotado]="presupuestoService.estaAgotado(presupuesto)">
+
+            <h2>{{ presupuesto.nombre }}</h2>
+
+            <p>
+                Mes: {{ presupuesto.mes }}
+            </p>
+
+            <p>
+                Presupuesto:
+                ₡{{ presupuesto.monto }}
+            </p>
+
+            <p>
+                Gastado:
+                ₡{{ presupuestoService.obtenerTotalGastado(presupuesto) }}
+            </p>
+
+            <p>
+                Saldo:
+                ₡{{ presupuestoService.obtenerSaldo(presupuesto) }}
+            </p>
+
+        </article>
+
+        } @empty {
+
+        <p class="sin-presupuestos">
+            No hay presupuestos creados.
+        </p>
+
+        }
+
+    </section>
+
+
+    <section class="formulario-presupuesto">
+
+        <div class="seccion-titulo">
+
+            <img src="/icons/presupuesto.svg" alt="">
+
+            <h1>Crear presupuesto</h1>
+
+        </div>
+
+        <form (ngSubmit)="crearPresupuesto()">
+
+            <label for="nombre">
+                Nombre del presupuesto
+            </label>
+
+            <input id="nombre" type="text" name="nombre" [(ngModel)]="nombre" placeholder="Ej. Presupuesto Personal">
+
+
+            <label for="mes">
+                Mes del presupuesto
+            </label>
+
+            <select id="mes" name="mes" [(ngModel)]="mes">
+
+                <option value="">
+                    Seleccione un mes
+                </option>
+
+                <option value="Enero">Enero</option>
+                <option value="Febrero">Febrero</option>
+                <option value="Marzo">Marzo</option>
+                <option value="Abril">Abril</option>
+                <option value="Mayo">Mayo</option>
+                <option value="Junio">Junio</option>
+                <option value="Julio">Julio</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Septiembre">Septiembre</option>
+                <option value="Octubre">Octubre</option>
+                <option value="Noviembre">Noviembre</option>
+                <option value="Diciembre">Diciembre</option>
+
+            </select>
+
+
+            <label for="monto">
+                Monto del presupuesto
+            </label>
+
+            <input id="monto" type="number" name="monto" [(ngModel)]="monto" min="1" placeholder="Ej. 300000">
+
+
+            <button type="submit">
+                Crear presupuesto
+            </button>
+
+        </form>
+
+    </section>
+
+</main>

@@ -1,1 +1,109 @@
-/* You can add global styles to this file, and also import other style files */
+/*estilos globales*/
+
+:root {
+    --fondo-principal: #ffffff;
+    --fondo-secundario: #f4f6f8;
+    --fondo-card: #ffffff;
+
+    --azul-corporativo: #174a7e;
+    --azul-oscuro: #10385f;
+
+    --amarillo-oscuro: #b88900;
+    --amarillo-claro: #f3e3a2;
+
+    --rojo-alerta: #c62828;
+    --rojo-claro: #fdecec;
+
+    --texto-principal: #263238;
+    --texto-secundario: #607d8b;
+
+    --borde: #dce2e7;
+
+    --sombra: rgba(0, 0, 0, 0.08);
+}
+
+/*estilos generales*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fondo-secundario);
+    color: var(--texto-principal);
+}
+
+/*titulos*/
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin-top: 0;
+}
+
+/*botones*/
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/*input y select*/
+
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+/*contenedor general*/
+
+main {
+    width: 100%;
+}
+
+/*seleccion de texto*/
+
+::selection {
+    background-color: var(--azul-corporativo);
+    color: var(--fondo-principal);
+}
+
+/*barra de desplazamiento*/
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--fondo-secundario);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--borde);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--azul-corporativo);
+}
+
+/*responsive*/
+
+@media (max-width: 700px) {
+
+    body {
+        font-size: 15px;
+    }
+
+}

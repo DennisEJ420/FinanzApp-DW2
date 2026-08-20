@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+
+  <!-- Fondo -->
+  <circle cx="100" cy="100" r="95" fill="#f4f6f8" stroke="#dce2e7" stroke-width="4"/>
+
+  <!-- Moneda -->
+  <circle
+    cx="100"
+    cy="100"
+    r="58"
+    fill="#174a7e"
+  />
+
+  <!-- Símbolo de colones -->
+  <text
+    x="100"
+    y="119"
+    font-family="Arial, sans-serif"
+    font-weight="900"
+    font-size="68"
+    fill="#ffffff"
+    text-anchor="middle"
+  >₡</text>
+
+  <!-- Flecha hacia abajo -->
+  <path
+    d="M145 48V78"
+    stroke="#b88900"
+    stroke-width="9"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="M132 68L145 81L158 68"
+    fill="none"
+    stroke="#b88900"
+    stroke-width="9"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+</svg>

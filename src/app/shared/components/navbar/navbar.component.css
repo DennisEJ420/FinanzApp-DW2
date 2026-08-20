@@ -1,0 +1,151 @@
+/*navbar*/
+
+.navbar {
+    width: 100%;
+    min-height: 68px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 28px;
+
+    background-color: var(--fondo-principal);
+
+    border-bottom: 3px solid var(--amarillo-oscuro);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 3px 10px var(--sombra);
+}
+
+/*marca*/
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar-brand img {
+    width: 42px;
+    height: 42px;
+
+    display: block;
+}
+
+/*icono de marca*/
+
+.brand-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background-color: var(--azul-corporativo);
+
+    color: var(--fondo-principal);
+
+    font-size: 18px;
+    font-weight: bold;
+
+    box-shadow: 0 3px 6px var(--sombra);
+}
+
+/*enlaces del navbar*/
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-links img {
+    width: 24px;
+    height: 24px;
+
+    display: block;
+}
+
+.navbar-links a.active {
+    font-weight: bold;
+}
+
+/*efecto al pasar el mouse*/
+
+.navbar-links a:hover {
+    background-color: var(--fondo-secundario);
+    color: var(--azul-corporativo);
+}
+
+/*enlace activo*/
+
+.navbar-links a.active {
+    background-color: var(--azul-corporativo);
+    color: var(--fondo-principal);
+
+    box-shadow: 0 3px 6px var(--sombra);
+}
+
+/*indicador amarillo*/
+
+.navbar-links a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 12px;
+    right: 12px;
+    bottom: 3px;
+
+    height: 2px;
+
+    background-color: var(--amarillo-oscuro);
+}
+
+/*responsive*/
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 60px;
+        padding: 10px 14px;
+    }
+
+    .navbar-brand {
+        font-size: 17px;
+    }
+
+    .brand-icon {
+        width: 31px;
+        height: 31px;
+        font-size: 16px;
+    }
+
+    .navbar-links {
+        gap: 3px;
+    }
+
+    .navbar-links a {
+        padding: 8px 9px;
+        font-size: 13px;
+    }
+
+}

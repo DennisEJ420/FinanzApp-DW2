@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+
+  <!-- Fondo -->
+  <circle cx="100" cy="100" r="95" fill="#f4f6f8" stroke="#dce2e7" stroke-width="4"/>
+
+  <!-- Billetera -->
+  <rect
+    x="38"
+    y="62"
+    width="124"
+    height="88"
+    rx="14"
+    fill="#174a7e"
+  />
+
+  <!-- Parte superior -->
+  <path
+    d="M55 62V52C55 44 61 38 69 38H133C141 38 147 44 147 52V62"
+    fill="none"
+    stroke="#174a7e"
+    stroke-width="10"
+    stroke-linecap="round"
+  />
+
+  <!-- Compartimento -->
+  <path
+    d="M111 88H162V124H111C101 124 93 116 93 106C93 96 101 88 111 88Z"
+    fill="#b88900"
+  />
+
+  <!-- Moneda -->
+  <circle cx="116" cy="106" r="7" fill="#ffffff"/>
+
+  <!-- Detalle -->
+  <path
+    d="M55 78H78"
+    stroke="#ffffff"
+    stroke-width="7"
+    stroke-linecap="round"
+  />
+
+</svg>

@@ -1,0 +1,133 @@
+/*contenedor principal*/
+
+.operaciones-container {
+    min-height: calc(100vh - 68px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+/*contenido*/
+
+.operaciones-content {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background-color: var(--fondo-card);
+
+    border: 1px solid var(--borde);
+    border-top: 5px solid var(--azul-corporativo);
+
+    border-radius: 16px;
+
+    box-shadow: 0 12px 30px var(--sombra);
+}
+
+/*titulo*/
+
+h1 {
+    margin: 0 0 10px;
+
+    color: var(--azul-corporativo);
+
+    font-size: 32px;
+}
+
+/*descripcion*/
+
+.descripcion {
+    margin-bottom: 35px;
+
+    color: var(--texto-secundario);
+
+    font-size: 15px;
+}
+
+/*botones*/
+
+.operaciones-buttons {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.operaciones-buttons button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--azul-corporativo);
+
+    color: var(--fondo-principal);
+
+    font-size: 16px;
+    font-weight: bold;
+
+    box-shadow: 0 4px 8px var(--sombra);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/*efecto al pasar el mouse*/
+
+.operaciones-buttons button:hover {
+    background-color: var(--azul-oscuro);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 14px var(--sombra);
+}
+
+/*segundo boton*/
+
+.operaciones-buttons button:nth-child(2) {
+    background-color: var(--amarillo-oscuro);
+}
+
+/*efecto del segundo boton*/
+
+.operaciones-buttons button:nth-child(2):hover {
+    background-color: #9c7400;
+
+    transform: translateY(-2px);
+}
+
+/*efecto al presionar*/
+
+.operaciones-buttons button:active {
+    transform: translateY(0);
+}
+
+/*responsive*/
+
+@media (max-width: 600px) {
+
+    .operaciones-container {
+        min-height: calc(100vh - 60px);
+
+        padding: 20px;
+    }
+
+    .operaciones-content {
+        padding: 30px 22px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+}

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+
+  <!-- Fondo -->
+  <circle cx="100" cy="100" r="95" fill="#f4f6f8" stroke="#dce2e7" stroke-width="4"/>
+
+  <!-- Engranaje -->
+  <path
+    d="M100 48
+       L110 52
+       L118 45
+       L132 53
+       L130 64
+       L140 72
+       L151 70
+       L158 85
+       L150 93
+       L153 105
+       L164 112
+       L158 128
+       L147 128
+       L140 138
+       L142 149
+       L126 156
+       L118 148
+       L106 152
+       L100 163
+       L84 158
+       L83 147
+       L72 140
+       L61 143
+       L51 130
+       L57 120
+       L53 109
+       L42 103
+       L45 86
+       L56 84
+       L62 72
+       L58 62
+       L73 53
+       L82 59
+       L94 53
+       Z"
+    fill="#174a7e"
+  />
+
+  <!-- Centro -->
+  <circle cx="100" cy="105" r="28" fill="#f4f6f8"/>
+  <circle cx="100" cy="105" r="12" fill="#b88900"/>
+
+</svg>

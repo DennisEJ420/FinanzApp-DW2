@@ -1,0 +1,273 @@
+/*contenedor principal*/
+
+.crear-presupuesto-container {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: start;
+
+    gap: 30px;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 35px 30px;
+}
+
+/*secciones*/
+
+.presupuestos-lista,
+.formulario-presupuesto {
+    width: 100%;
+
+    padding: 30px;
+
+    background-color: var(--fondo-card);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 22px var(--sombra);
+}
+
+/*titulos de secciones*/
+
+.seccion-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.seccion-titulo img {
+    width: 34px;
+    height: 34px;
+
+    display: block;
+}
+
+.seccion-titulo h1 {
+    margin: 0;
+}
+
+.presupuestos-lista h1,
+.formulario-presupuesto h1 {
+    margin-bottom: 25px;
+
+    color: var(--azul-corporativo);
+
+    font-size: 26px;
+}
+
+/*lista de presupuestos*/
+
+.presupuesto-card {
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    background-color: var(--fondo-secundario);
+
+    border: 1px solid var(--borde);
+    border-left: 5px solid var(--azul-corporativo);
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 8px var(--sombra);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/*efecto de presupuesto*/
+
+.presupuesto-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 14px var(--sombra);
+}
+
+/*nombre del presupuesto*/
+
+.presupuesto-card h2 {
+    margin: 0 0 15px;
+
+    color: var(--azul-corporativo);
+
+    font-size: 20px;
+}
+
+/*datos del presupuesto*/
+
+.presupuesto-card p {
+    margin-bottom: 8px;
+
+    color: var(--texto-secundario);
+
+    font-size: 14px;
+}
+
+.presupuesto-card p:last-child {
+    margin-bottom: 0;
+
+    color: var(--texto-principal);
+
+    font-weight: bold;
+}
+
+/*presupuesto agotado*/
+
+.presupuesto-card.presupuesto-agotado {
+    border-left-color: var(--rojo-alerta);
+
+    background-color: var(--rojo-claro);
+}
+
+.presupuesto-card.presupuesto-agotado h2 {
+    color: var(--rojo-alerta);
+}
+
+.presupuesto-card.presupuesto-agotado p:last-child {
+    color: var(--rojo-alerta);
+}
+
+/*mensaje sin presupuestos*/
+
+.sin-presupuestos {
+    padding: 30px 15px;
+
+    text-align: center;
+
+    color: var(--texto-secundario);
+
+    background-color: var(--fondo-secundario);
+
+    border: 1px dashed var(--borde);
+
+    border-radius: 10px;
+}
+
+/*formulario*/
+
+form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+/*etiquetas*/
+
+label {
+    margin-top: 8px;
+
+    color: var(--texto-principal);
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*campos*/
+
+input,
+select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 7px;
+
+    background-color: var(--fondo-principal);
+
+    color: var(--texto-principal);
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/*campo seleccionado*/
+
+input:focus,
+select:focus {
+    border-color: var(--azul-corporativo);
+
+    box-shadow: 0 0 0 3px rgba(23, 74, 126, 0.10);
+}
+
+/*boton*/
+
+button {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: var(--azul-corporativo);
+
+    color: var(--fondo-principal);
+
+    font-size: 16px;
+    font-weight: bold;
+
+    box-shadow: 0 4px 8px var(--sombra);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/*efecto del boton*/
+
+button:hover {
+    background-color: var(--azul-oscuro);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 14px var(--sombra);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/*responsive*/
+
+@media (max-width: 700px) {
+
+    .crear-presupuesto-container {
+        grid-template-columns: 1fr;
+
+        padding: 20px 15px;
+
+        gap: 20px;
+    }
+
+    .presupuestos-lista,
+    .formulario-presupuesto {
+        padding: 22px;
+    }
+
+    .presupuestos-lista h1,
+    .formulario-presupuesto h1 {
+        font-size: 23px;
+    }
+
+}
